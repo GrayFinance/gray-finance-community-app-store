@@ -19,7 +19,7 @@ services:
       - ${APP_DATA_DIR}/data/redis:/data
   
   frontend:
-    image: grayfinance/lightning-swap-frontend:1.0.0
+    image: grayfinance/lightning-swap-frontend:latest
     environment:
       - VITE_TITLE=LN Swap
     networks:
@@ -31,7 +31,7 @@ services:
       - backend
     
   backend:
-    image: grayfinance/lightning-swap-backend:1.0.0
+    image: grayfinance/lightning-swap-backend:latest
     ports:
       - 1536:1536
     environment:
